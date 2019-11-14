@@ -1,0 +1,39 @@
+/**
+&:hover
+svg
+fill $colorHeadHover
+&[data-name="marketing"]
+&[data-name="hr"]
+svg
+transition none
+[stroke]
+                    [fill]
+transition .3s
+             [stroke]
+             stroke white
+@media screen and (max-width: 450px)
+stroke $colorHeadHover
+[fill]:not([fill="none"])
+fill white
+@media screen and (max-width: 450px)
+fill $colorHeadHover
+&:hover
+svg
+[stroke]
+stroke $colorHeadHover
+[fill]:not([fill="none"])
+fill $colorHeadHover
+
+*///
+
+
+// беграунды
+.bg--mr{
+  padding-bottom: 80px;
+}
+.bg--mr_dablx1{
+  padding: 100px 0;
+}
+.bg--silver{
+  background-color: $silver_bg;
+}

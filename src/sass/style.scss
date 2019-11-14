@@ -1,0 +1,51 @@
+@import 'susy';
+@import 'plugins/svg-grid';
+@import "includes/bs-grid/grid";
+
+$susy: (
+        'columns': susy-repeat(12),
+        'gutters': 30px,
+        'spread': 'narrow',
+        'container-spread': 'narrow',
+        'svg-grid-colors': rgba(0,0,0,0.1)
+);
+
+
+// 1. Configuration and helpers
+@import
+'abstracts/config',
+'abstracts/variables',
+'abstracts/functions',
+'abstracts/mixins';
+
+// 2. Vendors
+/*@import
+'vendor/normalize';
+*/
+// 3. Base stuff
+@import
+'base/base',
+'base/fonts',
+'base/typography',
+'base/helpers',
+'base/nav';
+
+// 4. Layout-related sections
+@import
+'layout/header',
+'layout/footer';
+
+// 5. Components
+@import
+'components/button',
+'components/grid_mixins',
+'components/grids';
+
+// 6. Page-specific styles
+@import
+'pages/home',
+'pages/pages';
+// 7. Themes
+@import
+'themes/default';
+

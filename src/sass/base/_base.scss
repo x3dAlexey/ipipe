@@ -1,0 +1,79 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+body {
+  background-color:$background-base-color ;
+  color:var(--base-color);
+  font-family: var(--base-font);
+  font-size: var(--base-fontsize);
+  line-height: var(--base-lineheight);
+  font-weight: normal;
+  letter-spacing:var(--base-spacing);
+  margin: 0;
+
+}
+/** */
+
+.container{
+  max-width: $max-width;
+}
+.susy {
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 100%;
+    top: 0;
+    left:15px;
+    box-sizing: border-box;
+    background: susy-svg-grid() no-repeat scroll;
+    z-index: 999;
+  }
+
+}
+
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+  transition:opacity .3s ease-in-out;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  //@include transition(opacity(1), 3s ease-out);
+  @include on-event {
+    color: $brand-color-hover;
+    @if($brand-underline=='on'){
+      text-decoration: underline;
+    }@else{
+      text-decoration: none;
+    }
+
+  }
+}
+
+p{
+  margin: 0;
+  margin-top: 15px;
+}
+

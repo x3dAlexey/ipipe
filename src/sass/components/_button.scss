@@ -1,0 +1,84 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+// ��������� ������ @include button / @include button-colors($welow-buut)
+// �������� ������ ������ ������� �������
+
+/**/
+
+
+
+//after-images
+@mixin button-colors($user-butt){
+  background-color: map_get($user-butt,background-color);
+  color: map_get($user-butt,color);
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    background: url("#{$base-url}img/icons/#{map_get($user-butt,after-images)}") no-repeat;
+    width: 9px;
+    height: 16px;
+    top: 22px;
+    right:12%;
+  }
+  @include on-event(){
+    @if map_has_key($user-butt,hover){
+      @each $property, $value in map_get($user-butt,hover){
+        #{$property}: $value
+      }
+      &::after{
+        background: url("#{$base-url}img/icons/#{map_get(map_get($user-butt,hover),after_hover-images)}") no-repeat;
+      }
+
+    }
+    text-decoration: none;
+  }
+
+  @content;
+}
+
+
+
+
+@mixin button($def-conf:()){
+  $def-conf:extend((
+      display: inline-block,
+      width:$button-widh,
+      height:$button-heading,
+      font:$button-font,
+      font-size:$base-font-size,
+      border: $button-border,
+      radius:$button-radius
+  ),$def-conf);
+  @each $property, $value in $def-conf{
+    #{$property}: $value
+  }
+  padding-left: 26px;
+  font-weight:normal;
+  line-height: map_get($def-conf,height);
+  font-size: 18px;
+  cursor: pointer;
+  @if map_get($def-conf,radius) != none {
+    border-radius: map_get($def-conf,radius);
+  };
+  @content
+}
+
+
+
+
+
+
+/***
+СПИСОК КНОПОК
+*/
+
+.button_green{
+  @include button();
+  @include button-colors($geen-butt);
+}
+.button_wite{
+  @include button((border: 2px solid #96D376));
+  @include button-colors($wite-butt);
+}

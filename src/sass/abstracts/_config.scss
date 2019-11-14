@@ -1,0 +1,93 @@
+
+$background-base-color:#fff;
+$base-color:#485052;
+
+// -- ?????
+$base-font: 'montserat';    //'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$base-font-size:18px;
+$base-lineheigh:28px;
+
+
+// @ ??????
+$brand-color:#6ECCE6;
+$brand-color-hover:#6ECCE6;
+// --
+$brand-font-size:18px;
+$brand-font:'montserat';  //'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$brand-underline:'on';//on
+
+
+// @ ??????????
+$paragraf-color:#485052; // ??? p
+$strong-color:#485052; // ??? strong
+
+// @ ?????? ? ??????? button
+$button-widh:183px; // ????????? ????? ??????
+$button-heading:60px; // ????????? ?????? ? line-height
+$button-font:'normal'; // ?????
+$button-border:none;// none / 1px sold #fff
+$button-radius:30px; // none  / @include border-radius(5px);
+
+
+:root{
+    --base-color:#485052;
+    --base-font: 'montserat';
+    --base-lineheight:28px;
+    --base-fontsize:18px;
+    --base-spacing:0.01em;
+    --title_crl:#86CD62;
+}
+// ?????????? ??? ???????? ?????? ????? button-colors
+/*
+$black-buut:(
+
+    color: #fff,
+    background-color:#000,
+    'hover':(     @@@@@   ????? ?? ??????????
+        color: #000,
+        background-color:#943,
+    ),
+);
+
+*/
+// ???? ??????
+$geen-butt:(
+    color:#fff,
+    background-color:#62C032,
+    after-images:'wite_arrleft.png',
+    'hover':(
+        color: #62C032,
+        background-color:#fff,
+        border: 2px solid #96D376,
+        after_hover-images:'butt_arr-green.jpg',
+    ),
+);
+$wite-butt:(
+        color:#62C032,
+        background-color:#fff,
+        after-images:'butt_arr-green.jpg',
+        'hover':(
+                color: #fff,
+                background-color:#96D376,
+                after_hover-images:'wite_arrleft.png',
+        ),
+);
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1140px !default;
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+        'verysmall':320px,
+        'small': 480px,
+        'sm':576px,
+        'md': 768px,
+        'lg':992px,
+        'xl': 1140px,
+) !default;

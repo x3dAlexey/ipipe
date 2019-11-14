@@ -1,0 +1,272 @@
+
+.product-tabs{
+  padding-top:5px;
+  padding-bottom: 10px;
+  margin:0 5px;
+  &__head{
+    margin-bottom: 60px;
+    position: relative;
+    &-icon{
+      position: absolute;
+      left: 0;
+      top: -65px;
+    }
+    &-title{
+      margin-left: 85px;
+      margin-top: 54px;
+      max-width: 330px;
+      text-align: right;
+      padding-right: 10%;
+      background: #F6FAFC;
+      border: 3px solid #FFFFFF;
+      box-sizing: border-box;
+      box-shadow: inset 0px 10px 6px rgba(0, 0, 0, 0.06);
+      border-radius: 30px;
+      height: 50px;
+      font-size: 28px;
+      line-height: 50px;
+      font-weight: 500;
+    }
+  }
+  &__contetn{
+    @include flex();
+    margin-left: 50px;
+  }
+  &_icon{
+    img{
+      margin-bottom: 20px;
+      display: block;
+    }
+  }
+  &__list{
+    @extend %list;
+    margin-left: 55px;
+    padding-top: 20px;
+    li{
+      margin-bottom: 45px;
+      a{
+        color: #949899;
+        @include text_size(20px,28px);
+        @include on-event(){
+          color: var(--base-color);
+        }
+      }
+    }
+  }
+}
+
+// about
+.bg--about{
+  background: url("#{$base-url}img/bg/about.jpg") center center no-repeat;
+  padding-bottom: 107px !important;
+  h2{
+    margin-bottom: 25px;
+  }
+}
+// media column
+// акционные и предлоежние
+.sale_colm{
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.06);
+  border: 1px solid #F1F1F2;
+  @include media(30px){
+    padding-top: 29px;
+    .media_img{
+      margin-top: -30px;
+      img{display: block}
+    }
+    .sale_colm__title{
+      @include text_size(36px,42px);
+      font-weight: 700;
+      margin-bottom: 35px;
+    }
+    .sale_colm__text{
+      margin-top:0;
+    }
+    .sale_colm__button{
+      float: right;
+      margin-top: 40px;
+      margin-right: 26%;
+    }
+  }
+}
+
+// preimuhesva  Преимущества iPipe
+.advansed_box{
+  padding-bottom: 15px;
+}
+@include media_row(){
+  margin-bottom: 70px;
+  .media_body__title{
+    font-weight: 600;
+    @include text_size(20px,24px);
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+};
+.media_row__title--green{
+  color:var(--title_crl);
+}
+
+/// новости и блог
+// сектион хежер
+.header_section{
+  @include between;
+  &__title{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  &__link{
+    display: inline-block;
+    //margin-right: 20px;
+    margin-top: 18px;
+    text-decoration: underline;
+    @include on-event(){color: var(--title_crl)}
+  }
+}
+.section--paddings{
+  padding:30px 40px 40px;
+  border: 1px solid #F1F1F2;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.06);
+  //padding-top: 30px;
+}
+.news-section{
+  &__list{
+    margin-top: 15px;
+    @include media(10px){
+      //padding-left: 15px;
+      padding-top: 12px;
+      margin-bottom: 10px;
+      .media_img{
+        width: 118px;
+        height:118px;
+      }
+      .media_body{width: 100%}
+      .news-section__body-title{
+        font-weight: 600;
+        @include text_size(20px,26px);
+      }
+      .news-section__body-content{
+        background-color: $silver_bg;
+        border-radius: 0px 100px 100px 0px;
+        margin-top: 4px;
+        padding: 15px 11px;
+        margin-left: -11px;
+        //margin-right: -15px;
+        //@include flex($j:space-between,$w:'wrap');
+        @extend .clearfix;
+      }
+      .news-section__body-date{
+        margin-top: 5px;
+        color: #B8BABB;
+        font-weight: 500;
+        @include text_size(12px,15px)
+      }
+        .list-content-text{
+          @include text_size(16px,24px);
+          max-width:65%;
+          display: inline-block;
+        }
+        .list-content-button{
+          float: right;
+          width: 167px;
+          height: 50px;
+          line-height: 50px;
+          font-size: 16px;
+          &::after{
+            top: 15px;
+          }
+        }
+
+
+    };
+  }
+}
+// blogs
+.blog-section__list{
+  margin-top: 30px;
+  .blog-section__title{
+    font-weight: 600;
+    margin-bottom: 15px;
+    @include text_size(20px,26px)
+  }
+  .blog-section__text{
+    @include text_size(16px,24px)
+  }
+  .blog-section__button{
+    display:inline-block;
+    position: relative;
+    top: 21px;
+    z-index: 2;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 6px;
+    left: 18%;
+    background-color: #fff;
+      .button_wite{
+        display: inline-block;
+        width: 167px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 16px;
+        &::after{
+          top: 15px;
+        }
+      }
+  }
+  .blog-section__img{
+    margin-top: -10px;
+  }
+  .blog-section__date{
+    text-align: center;
+    color: #B8BABB;
+    font-weight: 500;
+    @include text_size(12px,15px);
+  }
+
+}
+// коментарии
+.slider_comments{
+  margin-top: 60px;
+  margin-bottom: 20px !important;
+  padding: 48px 60px;
+  padding-bottom: 70px;
+  background-color: #fff;
+  border: 1px solid #F4F5F5;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.06);
+  &__header{
+    @include between;
+    @include media(40px){
+      max-width: span(8);
+      padding: 0;
+      .media_img{
+        width: 120px;
+        height: 120px;
+      }
+      .comments_autor__title{
+        @include text_size(20px,26px);
+        font-weight: 600;
+        margin-top: 5px;
+      }
+      .comments_autor__text{
+        margin-top: 23px;
+        font-weight: 600;
+        color: #949899;
+        letter-spacing: 0.01em;
+        @include text_size(16px,22px)
+      }
+    };
+    .comments_header__logo{
+      margin-top: 5px;
+    }
+  }
+  &__content{
+    padding-top: 0px;
+  }
+  .slick-prev{
+    left: -90px;
+  }
+  .slick-next{
+    right: -95px;
+  }
+}

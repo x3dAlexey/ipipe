@@ -1,0 +1,87 @@
+
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+/// Native `url(..)` function wrapper
+/// @param {String} $base - base URL for the asset
+/// @param {String} $type - asset type folder (e.g. `fonts/`)
+/// @param {String} $path - asset path
+/// @return {Url}
+@function asset($base, $type, $path) {
+  @return url($base + $type + $path);
+}
+
+/// Returns URL to an image based on its path
+/// @param {String} $path - image path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function image($path, $base: $base-url) {
+  @return asset($base, 'images/', $path);
+}
+
+/// Returns URL to a font based on its path
+/// @param {String} $path - font path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function font($path, $base: $base-url) {
+  @return asset($base, 'fonts/', $path);
+}
+
+// ���� ��������
+// @use - //  background: color('yellow');  color: color('red', 'shade');
+@function color($color-name, $tone: base) {
+  @return map-get(map-get($colors, $color-name), $tone);
+}
+// �� px � em
+@function px-to-em($value, $base-font-size: 16px) {
+  @return ($value / $base-font-size) * 1em;
+}
+
+// ������� ���� ��������
+@function extend($obj, $ext-obj) {
+  @return map-merge($obj, $ext-obj);
+}
+
+@function perc($width, $container-width: $max-width) {
+  @return percentage($width / $container-width) ;
+}
+@function font($f-min, $f-max, $v-min, $v-max) {
+  $k: ($f-max - $f-min)/($v-max - $v-min);
+  $b: $f-min - $k * $v-min;
+
+  $b: $b * 1px;
+
+  @return calc( #{$k} * 100vw + #{$b} );
+}
+
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+// Responsive text mixin
+@mixin responsiveText ($minSize:"", $maxSize:"", $minWidth: map-get($breakpoints, small), $maxWidth: map-get($breakpoints, xl)) {
+
+
+  $mxS: strip-unit($maxSize);
+  $mnS: strip-unit($minSize);
+  $mxW: strip-unit($maxWidth);
+  $mnW: strip-unit($minWidth);
+
+  font-size: calc( #{$minSize} + (#{$mxS} - #{$mnS}) * (100vw - #{$minWidth}) / (#{$mxW} - #{$mnW}));
+
+  @media screen and (max-width: $minWidth ){
+    font-size: $minSize;
+  }
+
+  @media screen and (min-width: $maxWidth ){
+    font-size: $maxSize;
+  }
+
+}

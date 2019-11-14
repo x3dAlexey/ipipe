@@ -1,0 +1,257 @@
+extends _layouts/base
+
+block head_end
+
+
+block content
+	header
+		.head
+			.container
+				.row.justify-content-between
+					.col-6.col-md-4
+						.head__call
+							img(src="img/icons/call.png")
+							span +7 (495) 108 54 70 | 8 (800) 600 26 10
+					.col-6.col-md-4
+						.menu_top
+							ul
+								li: a(href="") Поддержка
+								li: a(href="") Документы
+								li: a(href="") Партнёрам
+		.header
+			.container
+				.row.justify-content-between
+					.col-3.logo_top
+						a(href=""): img(src="img/logo_ipipe_main.svg")
+					.main_menu
+						ul
+							li.dpom_menu: a(href="") Продукты
+							li: a(href="") Акции
+							li: a(href="") О компании
+					a(href="").avtoriz Войти
+						.avtoriz__icon
+								<svg width="18" height="20" viewBox="0 0 18 20" id="avtoriz_svg"  fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.2222 9.10248H2.77778C1.79594 9.10248 1 9.90816 1 10.902V17.2004C1 18.1943 1.79594 19 2.77778 19H15.2222C16.2041 19 17 18.1943 17 17.2004V10.902C17 9.90816 16.2041 9.10248 15.2222 9.10248Z" stroke="#D3ECC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								<path d="M4 9V6C4 3.23858 6.23858 1 9 1V1C11.7614 1 14 3.23858 14 6V9" stroke="#D3ECC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+				.menu_drop
+					.col-3
+						.menu_drop__item
+							.drop__item_title Домены
+							ul.drop__item_list
+								li
+									.drop__item_list--img
+										<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+										<rect width="28" height="28" fill="url(#pattern0)"/>
+
+										<defs>
+										<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+										<use xlink:href="#image0" transform="scale(0.02)"/>
+										</pattern>
+										<image id="image0" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAABN2lDQ1BBZG9iZSBSR0IgKDE5OTgpAAAokZWPv0rDUBSHvxtFxaFWCOLgcCdRUGzVwYxJW4ogWKtDkq1JQ5ViEm6uf/oQjm4dXNx9AidHwUHxCXwDxamDQ4QMBYvf9J3fORzOAaNi152GUYbzWKt205Gu58vZF2aYAoBOmKV2q3UAECdxxBjf7wiA10277jTG+38yH6ZKAyNguxtlIYgK0L/SqQYxBMygn2oQD4CpTto1EE9AqZf7G1AKcv8ASsr1fBBfgNlzPR+MOcAMcl8BTB1da4Bakg7UWe9Uy6plWdLuJkEkjweZjs4zuR+HiUoT1dFRF8jvA2AxH2w3HblWtay99X/+PRHX82Vun0cIQCw9F1lBeKEuf1UYO5PrYsdwGQ7vYXpUZLs3cLcBC7dFtlqF8hY8Dn8AwMZP/fNTP8gAAAAJcEhZcwAACxMAAAsTAQCanBgAAATtaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0NSA3OS4xNjM0OTksIDIwMTgvMDgvMTMtMTY6NDA6MjIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMTktMDktMjNUMTU6MDg6MjMrMDM6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDE5LTEwLTAyVDExOjA1KzAzOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTEwLTAyVDExOjA1KzAzOjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpmOGYwODMxYy1lMTZmLTlmNGQtYjBlYi00OWRhMjY3NWZmNWMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ZjhmMDgzMWMtZTE2Zi05ZjRkLWIwZWItNDlkYTI2NzVmZjVjIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6ZjhmMDgzMWMtZTE2Zi05ZjRkLWIwZWItNDlkYTI2NzVmZjVjIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpmOGYwODMxYy1lMTZmLTlmNGQtYjBlYi00OWRhMjY3NWZmNWMiIHN0RXZ0OndoZW49IjIwMTktMDktMjNUMTU6MDg6MjMrMDM6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz77ayHcAAAE/klEQVRoge3Za6xcVRUH8N/ArQ0iJg0GDVBJQ8gMExKs5YYUpA2JkpqGFiPwpaUmWOGDqcorrYRHwaSlsTFCIAQKqKUmBgKlJahVCGoIhlYkPno4J40iNr4SoDwkSh+MH9ae3uN05t65987tqY3/5GTP7L3XOet/1t5rrbN2rdVqORpwTNUKDApDk71BlhejDZ+Oh9PvK/CHyT6vE81GHVNrkYXYgbnp2pH6pgRTQeQY3I4nMQOb0zUj9d0+Fc8d9A1PxFO4Ge/jNlyKz+Nr2J/GnsZJg3zwIInMFstnAV7DZ7FaEGrhTnwaf8eF+BXOHdTDB0VkGZ7DLLyIc/DTLvN+kcZ+iZn4Oa4qjbd6XGNiUkSyvJgu3vT38EHcj/Pw6ihif8E8rMN03IeNSX7CmLD7zfJiJh4Vy+Pf+DIe6lN8P1bhd4LIFTirNF5Lbd/RekIWyfKivMb/jAv0T6KM7+N8EV9m418T0YdxEsnyopblxUqx/k8SHuoTgtRE8Rt8Eo/juNR3x3h163tylhcfxmOlh6zDIuwZzwN74G3hplfhAFaKmNM3av0kjVlenC1InI7XsaTZqG9LY+NTeWxciB/47zhT6zG3/xQly4sleF6QeAnDbRJThGeFi36h1PfFsYR6EsnyYijLizuwSbjGh3F+s1F/ZZKK9oPdmI+70/8HhHf7QC+Bru43y4tThGudi/ewotmobxioqmPjPazArwWhqzBH7KU/dU4+xCJZXswXXmiueDPzKiBRxnfwKfxRENmBz3ROOkgkudavijX6sdSe02zUtx8WdUfHSxjGj/ERbBN53EH9a61WS5YXJ4iAdmlJeKjZqB8Y6wlT4LVGQ00koW08iWXNRv3NNqNnBYmDMaEfEhWgHCv24GLxSXDQNG+IjHT48Oo1KQwLnd+gS0DM8qIFzUa9ZxDqmD9g/cZEW+Eah+eb/bDi/0SONBw1RCZdoCthorXXvpzKWPhftMjfunUO0iJt9PuGJ2rBWVja2XmkWWSayDA24WX8E++k35vS2Pt4sFNwKiwyHtxd+r0Y38QZXeY10rUEu3ADtpQnVGmRR/CVpMNaPCFI7MQ1ojz0oXSdhWuRpTmbsUZJ/yotslzskzWi6LAX1+FeUYAoY2e67hL1s/X4ehq7kWot8o5YTisFiYViqY2WdR8QZBZiH1ZlebGIaolME3uiJizxdB8y03G5qKvdkGTXZ3kxrcqltdjInri3j/k1UYRYmuTW4WqcicVVWuRzqd1g9OXUxq2CxNviy3C/IEbFROakttvxQyeW4haxly7Bb1P/T1I7XCWRk1O7u9S3Gs2OefOMvPkvic/yNtrHFycfSZH9MrF8thtJQc4Qxe3pguTGXsJVEvlraj+e2h+KY4bjRVXzQVHtPxHfxTe63OO09r2qJNI+irgote8KS3xBnJNcKSzyM+GduiWZC1K7vUoiT6R2OY4t9W8UB0ev4Pdic+/tIj9kpLi9tUoiW0QC2BRpRxkvCq+2AG/1kF8hEsld2FIlkX0iOrdE7tRZz90jDk674SIREFu4vtmo7+tZ15pi/ANnp3aNSADbxO4Rwa4bhoQl1okUZ22zUe+ZND4zWJ274qMiNtRwk0jjh/BtcaZ4rUPT+OtEIPxWmrs2yaLPo7fRMMBK4yKxxLp9WJWxC9djKyOVxqq/EMvYih+JZPISsdlPTWO7hQPYkq59ncL/AZtdTFOA6VhKAAAAAElFTkSuQmCC"/>
+										</defs>
+										</svg>
+
+									a(href="").drop__item_list--link Регистрация доменов
+
+	section(role="main_slider")
+		.slide_top
+			.slide.host-slide
+				.container
+					.slide__content
+						.slide__content-title Виртуальный хостинг
+						.slide__content-text Оплатите хостинг на год и получите домен .ru / .рф / .su и 25% скидку в подарок
+							.slide__content-text--small (кроме тарифа «Стартовый»)
+						.button_green.slide__content-button Подобрать тариф
+			.slide.host-slide
+				.container
+					.slide__content
+						.slide__content-title Виртуальный хостинг
+						.slide__content-text Оплатите хостинг на год и получите домен .ru / .рф / .su и 25% скидку в подарок
+							.slide__content-text--small (кроме тарифа «Стартовый»)
+						.button_green.slide__content-button Подобрать тариф
+	.container
+		h1 Продукты iPipe
+		.row.bg--mr
+			.col-6
+				.product-tabs
+					.product-tabs__head
+						.product-tabs__head-title
+							span Домены
+						.product-tabs__head-icon
+							img(src="img/product_tabs/domaine_act.png")
+					.product-tabs__contetn
+						.product-tabs_icon
+							img(src="img/product_tabs/domens/hosting_nonactive.png")
+							img(src="img/product_tabs/domens/hosting_nonactive.png")
+							img(src="img/product_tabs/domens/hosting_nonactive.png")
+						ul.product-tabs__list
+							li: a(href="") Регистрация доменов
+							li: a(href="") SSL-сертификаты
+							li: a(href="") Перенос доменов
+							li: a(href="") Сервисы
+
+			.col-6
+				h4.title--green.title--mr_top Регистрация доменных имён
+				p.paragraf--mr Каждый из нас понимает очевидную вещь: противоположная консультация с широким активом способствует повышению качества переосмысления внешнеэкономических политик. Банальные, но неопровержимые выводы, а также стремящиеся вытеснить традиционное производство, нанотехнологии являются только методом политического участия и в равной степени предоставлены сами себе.
+				p.paragraf--mr Приятно, граждане, наблюдать, как ключевые особенности структуры проекта ограничены исключительно образом мышления
+	section.bg--about.bg--mr
+		.container
+			h2.title--left О компании
+			.row
+				.col-6
+					p.paragraf--mr IPipe — надёжный хостинг-провайдер с опытом работы более 15 лет. Главный принцип компании - надёжность и удобство всех услуг. Нашими решениями пользуются как начинающие пользователи для размещения небольших проектов, так и компании с командами разработчиков, которым требуются сотни серверов в общей инфраструктуре.
+					p.paragraf--mr Мы уверены в качестве наших услуг, поэтому для большинства из них мы предлагаем тестовый период,  а также возврат средств в течение 30 дней без объяснения причин.
+	.container
+		.row.bg--mr_dablx1
+			.col-6
+				.sale_colm
+					.media
+						.media_img
+							img(src="img/sale/sale2.jpg")
+						.media_body
+							.sale_colm__title Заголовок акционного предложения
+							p.sale_colm__text Подробности акционного предложения в несколько строк. Пояснения для привлечения внимания
+							a(href="").sale_colm__button.button_wite Подробнее
+			.col-6
+				.sale_colm
+					.media
+						.media_img
+							img(src="img/sale/sale1.jpg")
+						.media_body
+							.sale_colm__title Партнёрская программа
+							p.sale_colm__text Подробности партнерской программы предложения в несколько строк. Пояснения для привлечения внимания. Почему стоит работать с нами.
+							a(href="").sale_colm__button.button_wite Подробнее
+	section.bg--silver.advansed_box
+		.container
+				h2.title--mr_media Преимущества iPipe
+				.row
+					each advan_obj in advantages_main
+						.col-4
+							.media_row
+								img(src="img/media/" +advan_obj.img+ "").media_img
+								.media_body
+									.media_body__title.media_row__title--green=advan_obj.title
+									.media_body__text=advan_obj.text
+	.container
+		.row.bg--mr_dablx1
+			.col-8
+				.news-section.section--paddings
+					.header_section
+						h2.header_section__title.title--left Новости компании
+						a(href="").header_section__link Все новости
+					.news-section__list
+						section.media
+							img(src="img/news/section_min/news1.jpg").media_img
+							.media_body
+								.news-section__body-title Интересный заголовок статьи
+								.news-section__body-content
+									.list-content-text Краткое описание новости, основные события, тезисы и тд. Любой текст
+									.list-content-button.button_wite Подробнее
+								.news-section__body-date 28 сентября 2019 г.
+						section.media
+							img(src="img/news/section_min/news1.jpg").media_img
+							.media_body
+								.news-section__body-title Второй очень интересный заголовок
+								.news-section__body-content
+									.list-content-text Если текст в описании или в заголовке не помещается, его следуе...
+									.list-content-button.button_wite Подробнее
+								.news-section__body-date 28 сентября 2019 г.
+						section.media
+							img(src="img/news/section_min/news1.jpg").media_img
+							.media_body
+								.news-section__body-title Заголовок третей статьи, который не поме...
+								.news-section__body-content
+									.list-content-text Его следует обрезать тремя точками в
+									.list-content-button.button_wite Подробнее
+								.news-section__body-date 28 сентября 2019 г.
+
+			.col-4
+				.blogs-section.section--paddings
+					.header_section
+						h2.header_section__title.title--left Блог
+						a(href="").header_section__link Все статьи
+					.blog-section__list
+						.blog-section__title Интересный заголовок статьи из блога в три строчки
+						.blog-section__text Краткое описание новости, основные события, тезисы и тд. Любой текст.
+						.blog-section__button
+							.button_wite Подробнее
+						img(src="img/blog/blog_mini.jpg").blog-section__img
+						.blog-section__date 18 июля 2019 г.
+	section.bg--silver.bg--mr
+		.container
+			h2 Отзывы клиентов
+			.row.justify-content-center
+				.col-10
+					.slider_comments.slide_top
+						section
+							.slider_comments__header
+								.media.comments_autor
+									img(src="img/comments/cisco/comen1.png").media_img
+									.media_body
+										.comments_autor__title.title--green Фамилия Имя Отчество
+										.comments_autor__text Длинное названи компании «Фирма» Должность в компании
+								a(href="").comments_header__logo
+									img(src="img/comments/cisco/logo_com.png")
+							.slider_comments__content
+								p Каждый из нас понимает очевидную вещь: противоположная консультация с широким активом способствует повышению качества переосмысления внешнеэкономических политик. Банальные, но неопровержимые выводы, а также стремящиеся вытеснить традиционное производство, нанотехнологии являются только методом политического участия и в равной степени предоставлены сами себе.
+								p.paragraf--mr Приятно, граждане, наблюдать, как ключевые особенности структуры проекта ограничены исключительно образом мышления.
+						section
+							.slider_comments__header
+								.media.comments_autor
+									img(src="img/comments/cisco/comen1.png").media_img
+									.media_body
+										.comments_autor__title.title--green Фамилия Имя Отчество
+										.comments_autor__text Длинное названи компании «Фирма» Должность в компании
+								a(href="").comments_header__logo
+									img(src="img/comments/cisco/logo_com.png")
+							.slider_comments__content
+								p Каждый из нас понимает очевидную вещь: противоположная консультация с широким активом способствует повышению качества переосмысления внешнеэкономических политик. Банальные, но неопровержимые выводы, а также стремящиеся вытеснить традиционное производство, нанотехнологии являются только методом политического участия и в равной степени предоставлены сами себе.
+								p.paragraf--mr Приятно, граждане, наблюдать, как ключевые особенности структуры проекта ограничены исключительно образом мышления.
+	footer
+		.container
+			.row
+				.col-6
+					.footer_item.foot_bord
+						.footer_item__header Навигация по сайту
+						.row
+							.col-6
+								ul.footer_item__menu
+									li: a(href="") Главная
+							.col-6
+								ul.footer_item__menu
+									li: a(href="") VPS готовые
+				.col-4
+					.footer_item.foot_bord
+						.footer_item__header Навигация по сайту
+						.row
+							.col-6
+								ul.footer_item__menu
+									li: a(href="") Главная
+							.col-6
+								ul.footer_item__menu
+									li: a(href="") VPS готовые
+				.col-2
+					.footer_item
+						.footer_item__header Контакты
+						ul.footer_item__menu
+							li: a(href="tel:8 (800) 600-26-10") 8 (800) 600-26-10
+							li: a(href="tel:+7 (495) 108-54-70") +7 (495) 108-54-70
+							li.mr--foot 115280, г. Москва,  ул. Ленинская Слобода, д. 19, 3 этаж, комната 21Ж-1Ф
+			.foot
+				.row.justify-content-between
+					a(href="").foot__logo
+						img(src="img/logo_footer.png")
+					.foot__terms © 2019. При использовании материалов сайта обязательна ссылка на источник.
+					.foot__social
+						a(href=""): img(src="img/social/feis.png")
+						a(href=""): img(src="img/social/twit.png")
+						a(href=""): img(src="img/social/vk.png")
+
+
+
+
+
+
+block body_end
+	script(type="text/javascript" src="/js/script.js")

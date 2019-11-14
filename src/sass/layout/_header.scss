@@ -1,0 +1,100 @@
+.head{
+  background-color: $black_bg;
+  color: $silver;
+  &__call{
+    margin: 14px 0;
+    @include flex();
+    span{
+      @include text_size(16px,22px);
+      font-weight: 500;
+      margin-left: 10px;
+    }
+  }
+}
+//header
+.header .container{
+  position: relative;
+}
+.logo_top{
+  margin-top: 20px;
+}
+.avtoriz{
+  display: block;
+  width: 146px;
+  height: 50px;
+  background: linear-gradient(90deg, #6FD93A 15.36%, #62C032 83.94%);
+  box-shadow: inset 1px 1px 4px rgba(72, 80, 82, 0.25);
+  border-radius: 30px;
+  margin-top: 35px;
+  line-height: 50px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  padding-left: 25px;
+  vertical-align: middle;
+  margin-right: 15px;
+  transition:opacity .3s ease-in-out;
+  &__icon{
+    position: absolute;
+    background-color: #fff;
+    width: 38px;
+    height: 38px;
+    top: 6px;
+    right: 6px;
+    border-radius: 50%;
+    text-align: center;
+  }
+  @include on-event(){
+    color: #fff;
+    text-decoration: none;
+    #avtoriz_svg{
+      path{
+        stroke:#96D376;
+      }
+
+    }
+  }
+}
+///
+
+.slide{
+  width: 100%;
+  box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.1);
+  .container{
+    height: 100%;
+  }
+}
+.slide__content{
+  max-width: span(5);
+  height: 100%;
+  @include flex(center,nowrap,flex-start,column);
+  &-title{
+    @include responsiveText(28px,44px);
+    line-height: 130%;
+    font-weight: 700;
+    margin-bottom: 50px;
+
+  }
+  &-text{
+    @include responsiveText(18px,28px);
+    line-height: 34px;
+    color: #949899;
+    &--small{
+      @include text_size(16px,24px);
+      margin-top: 20px;
+    }
+  }
+  &-button{
+    width: 250px !important;
+    margin-top: 75px;
+  }
+
+}
+.host-slide{
+  background: url("#{$base-url}img/slide/host_slide_main.png")center center no-repeat;
+}
+[role="main_slider"] .slide{
+   height: 630px;
+   background-color:$silver_bg;
+ }

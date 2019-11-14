@@ -1,0 +1,147 @@
+/*********************
+VARIABLES
+**********************/
+$link-color:#949899;
+$link-hover:#CACBCC;
+$link-vertical-padding:5px;      /*Controls Menu top & bottom padding*/
+$link-horizontal-padding:25px;    /*Contols Menu left & right padding*/
+$menu-background:'';        /*Control Menu Color Scheme*/
+$menu-background-hover:'';
+
+
+
+/*********************
+NAVIGATION STYLES
+**********************/
+
+.menu_top {
+  margin-top: 14px;
+  //margin-right: 5px;
+  //@include span(3 no-gutter);
+  ul {
+    width:100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include flex($j:flex-end);
+    //@include between;
+    li {
+      display:block;
+      width: auto;
+      margin-left: 22px;
+      a {
+        display: block;
+        color: #808687;
+        //font-family: $semi;
+        @include text_size(16px,22px);
+        font-weight: 500;
+        text-decoration: none;
+
+        @include on-event() {
+          color:$link-hover;
+        }
+        &:last-child{
+          padding-right: 0;
+        }
+      }
+      .active {
+        font-weight: bold;
+      }
+      &:last-child{
+        padding-right:0;
+      }
+
+    }
+  }
+}
+
+
+.main_menu{
+  //max-width: susy-span(5);
+  width: susy-span(5);
+  margin: 49px 0;
+  ul {
+    width:100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include flex($j:center);
+    //@include between;
+    li {
+      display:block;
+      width: auto;
+      margin-right:8%;
+      a {
+        display: block;
+        color: $link-color;
+        @include text_size(18px,22px);
+        text-align: center;
+        font-weight: normal;
+        @include on-event() {
+          color: $link-hover;
+          text-decoration:none;
+        }
+
+      }
+      .active {
+        font-weight: bold;
+      }
+      &:last-child{
+        margin-right: 0;
+      }
+
+    }
+    .dpom_menu{
+      position: relative;
+      padding-right:25px;
+      &::after{
+        content: "";
+        position: absolute;
+        background: url("#{$base-url}img/icons/arr_botom.png") no-repeat;
+        width: 14px;
+        height: 8px;
+        right: 0;
+        top: 7px;
+      }
+
+    }
+  }
+}
+
+.menu_drop{
+  display: none;
+  position: absolute;
+  top: 120px;
+  z-index: 999;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px 25px;
+  border-top: 2px solid #F1F1F2;
+  &__item{
+    .drop__item_title{
+      @include text_size(22px,27px);
+      color: #86CD62;
+    }
+  }
+  .drop__item_list{
+    @extend %list;
+    margin-top: 24px;
+    li{
+      @include flex();
+      margin-bottom: 22px;
+    }
+      &--img{
+        width: 28px;
+        height: 28px;
+      }
+      &--link{
+        display: block;
+        margin-top: 5px;
+        margin-left: 10px;
+        color: #A5A9AB;
+        @include text_size(16px,20px);
+      }
+  }
+}
+
