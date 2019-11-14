@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description">
+    <link href="slick/slick.css" rel="stylesheet" type="text/css">
+    <link href="slick/slick-theme.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body><!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com">upgrade your browser</a> to improve your experience and security.</p><![endif]-->
+    <header>
+      <div class="head">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-6 col-md-4">
+              <div class="head__call"><img src="img/icons/call.png"><span>+7 (495) 108 54 70 | 8 (800) 600 26 10</span></div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="menu_top">
+                <ul>
+                  <li><a href="">Поддержка</a></li>
+                  <li><a href="">Документы</a></li>
+                  <li><a href="">Партнёрам</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-3 logo_top"><a href=""><img src="img/logo_ipipe_main.svg"></a></div>
+            <div class="main_menu">
+              <ul>
+                <li class="dpom_menu"><a href="">Продукты</a></li>
+                <li><a href="">Акции</a></li>
+                <li><a href="">О компании</a></li>
+              </ul>
+            </div><a class="avtoriz" href="">Войти
+              <div class="avtoriz__icon"><svg width="18" height="20" viewBox="0 0 18 20" id="avtoriz_svg"  fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.2222 9.10248H2.77778C1.79594 9.10248 1 9.90816 1 10.902V17.2004C1 18.1943 1.79594 19 2.77778 19H15.2222C16.2041 19 17 18.1943 17 17.2004V10.902C17 9.90816 16.2041 9.10248 15.2222 9.10248Z" stroke="#D3ECC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4 9V6C4 3.23858 6.23858 1 9 1V1C11.7614 1 14 3.23858 14 6V9" stroke="#D3ECC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              </div></a>
+          </div>
+          <div class="menu_drop">
+            <div class="col-3">
+              <div class="menu_drop__item">
+                <div class="drop__item_title">Домены</div>
+                <ul class="drop__item_list">
+                  <li>
+                    <div class="drop__item_list--img"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="28" height="28" fill="url(#pattern0)"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="scale(0.02)"/>
+</pattern>
+<image id="image0" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAABN2lDQ1BBZG9iZSBSR0IgKDE5OTgpAAAokZWPv0rDUBSHvxtFxaFWCOLgcCdRUGzVwYxJW4ogWKtDkq1JQ5ViEm6uf/oQjm4dXNx9AidHwUHxCXwDxamDQ4QMBYvf9J3fORzOAaNi152GUYbzWKt205Gu58vZF2aYAoBOmKV2q3UAECdxxBjf7wiA10277jTG+38yH6ZKAyNguxtlIYgK0L/SqQYxBMygn2oQD4CpTto1EE9AqZf7G1AKcv8ASsr1fBBfgNlzPR+MOcAMcl8BTB1da4Bakg7UWe9Uy6plWdLuJkEkjweZjs4zuR+HiUoT1dFRF8jvA2AxH2w3HblWtay99X/+PRHX82Vun0cIQCw9F1lBeKEuf1UYO5PrYsdwGQ7vYXpUZLs3cLcBC7dFtlqF8hY8Dn8AwMZP/fNTP8gAAAAJcEhZcwAACxMAAAsTAQCanBgAAATtaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0NSA3OS4xNjM0OTksIDIwMTgvMDgvMTMtMTY6NDA6MjIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIgeG1wOkNyZWF0ZURhdGU9IjIwMTktMDktMjNUMTU6MDg6MjMrMDM6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDE5LTEwLTAyVDExOjA1KzAzOjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDE5LTEwLTAyVDExOjA1KzAzOjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpmOGYwODMxYy1lMTZmLTlmNGQtYjBlYi00OWRhMjY3NWZmNWMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ZjhmMDgzMWMtZTE2Zi05ZjRkLWIwZWItNDlkYTI2NzVmZjVjIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6ZjhmMDgzMWMtZTE2Zi05ZjRkLWIwZWItNDlkYTI2NzVmZjVjIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDpmOGYwODMxYy1lMTZmLTlmNGQtYjBlYi00OWRhMjY3NWZmNWMiIHN0RXZ0OndoZW49IjIwMTktMDktMjNUMTU6MDg6MjMrMDM6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz77ayHcAAAE/klEQVRoge3Za6xcVRUH8N/ArQ0iJg0GDVBJQ8gMExKs5YYUpA2JkpqGFiPwpaUmWOGDqcorrYRHwaSlsTFCIAQKqKUmBgKlJahVCGoIhlYkPno4J40iNr4SoDwkSh+MH9ae3uN05t65987tqY3/5GTP7L3XOet/1t5rrbN2rdVqORpwTNUKDApDk71BlhejDZ+Oh9PvK/CHyT6vE81GHVNrkYXYgbnp2pH6pgRTQeQY3I4nMQOb0zUj9d0+Fc8d9A1PxFO4Ge/jNlyKz+Nr2J/GnsZJg3zwIInMFstnAV7DZ7FaEGrhTnwaf8eF+BXOHdTDB0VkGZ7DLLyIc/DTLvN+kcZ+iZn4Oa4qjbd6XGNiUkSyvJgu3vT38EHcj/Pw6ihif8E8rMN03IeNSX7CmLD7zfJiJh4Vy+Pf+DIe6lN8P1bhd4LIFTirNF5Lbd/RekIWyfKivMb/jAv0T6KM7+N8EV9m418T0YdxEsnyopblxUqx/k8SHuoTgtRE8Rt8Eo/juNR3x3h163tylhcfxmOlh6zDIuwZzwN74G3hplfhAFaKmNM3av0kjVlenC1InI7XsaTZqG9LY+NTeWxciB/47zhT6zG3/xQly4sleF6QeAnDbRJThGeFi36h1PfFsYR6EsnyYijLizuwSbjGh3F+s1F/ZZKK9oPdmI+70/8HhHf7QC+Bru43y4tThGudi/ewotmobxioqmPjPazArwWhqzBH7KU/dU4+xCJZXswXXmiueDPzKiBRxnfwKfxRENmBz3ROOkgkudavijX6sdSe02zUtx8WdUfHSxjGj/ERbBN53EH9a61WS5YXJ4iAdmlJeKjZqB8Y6wlT4LVGQ00koW08iWXNRv3NNqNnBYmDMaEfEhWgHCv24GLxSXDQNG+IjHT48Oo1KQwLnd+gS0DM8qIFzUa9ZxDqmD9g/cZEW+Eah+eb/bDi/0SONBw1RCZdoCthorXXvpzKWPhftMjfunUO0iJt9PuGJ2rBWVja2XmkWWSayDA24WX8E++k35vS2Pt4sFNwKiwyHtxd+r0Y38QZXeY10rUEu3ADtpQnVGmRR/CVpMNaPCFI7MQ1ojz0oXSdhWuRpTmbsUZJ/yotslzskzWi6LAX1+FeUYAoY2e67hL1s/X4ehq7kWot8o5YTisFiYViqY2WdR8QZBZiH1ZlebGIaolME3uiJizxdB8y03G5qKvdkGTXZ3kxrcqltdjInri3j/k1UYRYmuTW4WqcicVVWuRzqd1g9OXUxq2CxNviy3C/IEbFROakttvxQyeW4haxly7Bb1P/T1I7XCWRk1O7u9S3Gs2OefOMvPkvic/yNtrHFycfSZH9MrF8thtJQc4Qxe3pguTGXsJVEvlraj+e2h+KY4bjRVXzQVHtPxHfxTe63OO09r2qJNI+irgote8KS3xBnJNcKSzyM+GduiWZC1K7vUoiT6R2OY4t9W8UB0ev4Pdic+/tIj9kpLi9tUoiW0QC2BRpRxkvCq+2AG/1kF8hEsld2FIlkX0iOrdE7tRZz90jDk674SIREFu4vtmo7+tZ15pi/ANnp3aNSADbxO4Rwa4bhoQl1okUZ22zUe+ZND4zWJ274qMiNtRwk0jjh/BtcaZ4rUPT+OtEIPxWmrs2yaLPo7fRMMBK4yKxxLp9WJWxC9djKyOVxqq/EMvYih+JZPISsdlPTWO7hQPYkq59ncL/AZtdTFOA6VhKAAAAAElFTkSuQmCC"/>
+</defs>
+</svg>
+                    </div><a class="drop__item_list--link" href="">Регистрация доменов</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section role="main_slider">
+      <div class="slide_top">
+        <div class="slide host-slide">
+          <div class="container">
+            <div class="slide__content">
+              <div class="slide__content-title">Виртуальный хостинг</div>
+              <div class="slide__content-text">Оплатите хостинг на год и получите домен .ru / .рф / .su и 25% скидку в подарок
+                <div class="slide__content-text--small">(кроме тарифа «Стартовый»)</div>
+              </div>
+              <div class="button_green slide__content-button">Подобрать тариф</div>
+            </div>
+          </div>
+        </div>
+        <div class="slide host-slide">
+          <div class="container">
+            <div class="slide__content">
+              <div class="slide__content-title">Виртуальный хостинг</div>
+              <div class="slide__content-text">Оплатите хостинг на год и получите домен .ru / .рф / .su и 25% скидку в подарок
+                <div class="slide__content-text--small">(кроме тарифа «Стартовый»)</div>
+              </div>
+              <div class="button_green slide__content-button">Подобрать тариф</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <h1>Продукты iPipe</h1>
+      <div class="row bg--mr">
+        <div class="col-6">
+          <div class="product-tabs">
+            <div class="product-tabs__head">
+              <div class="product-tabs__head-title"><span>Домены</span></div>
+              <div class="product-tabs__head-icon"><img src="img/product_tabs/domaine_act.png"></div>
+            </div>
+            <div class="product-tabs__contetn">
+              <div class="product-tabs_icon"><img src="img/product_tabs/domens/hosting_nonactive.png"><img src="img/product_tabs/domens/hosting_nonactive.png"><img src="img/product_tabs/domens/hosting_nonactive.png"></div>
+              <ul class="product-tabs__list">
+                <li><a href="">Регистрация доменов</a></li>
+                <li><a href="">SSL-сертификаты</a></li>
+                <li><a href="">Перенос доменов</a></li>
+                <li><a href="">Сервисы</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <h4 class="title--green title--mr_top">Регистрация доменных имён</h4>
+          <p class="paragraf--mr">Каждый из нас понимает очевидную вещь: противоположная консультация с широким активом способствует повышению качества переосмысления внешнеэкономических политик. Банальные, но неопровержимые выводы, а также стремящиеся вытеснить традиционное производство, нанотехнологии являются только методом политического участия и в равной степени предоставлены сами себе.</p>
+          <p class="paragraf--mr">Приятно, граждане, наблюдать, как ключевые особенности структуры проекта ограничены исключительно образом мышления</p>
+        </div>
+      </div>
+    </div>
+    <section class="bg--about bg--mr">
+      <div class="container">
+        <h2 class="title--left">О компании</h2>
+        <div class="row">
+          <div class="col-6">
+            <p class="paragraf--mr">IPipe — надёжный хостинг-провайдер с опытом работы более 15 лет. Главный принцип компании - надёжность и удобство всех услуг. Нашими решениями пользуются как начинающие пользователи для размещения небольших проектов, так и компании с командами разработчиков, которым требуются сотни серверов в общей инфраструктуре.</p>
+            <p class="paragraf--mr">Мы уверены в качестве наших услуг, поэтому для большинства из них мы предлагаем тестовый период,  а также возврат средств в течение 30 дней без объяснения причин.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="row bg--mr_dablx1">
+        <div class="col-6">
+          <div class="sale_colm">
+            <div class="media">
+              <div class="media_img"><img src="img/sale/sale2.jpg"></div>
+              <div class="media_body">
+                <div class="sale_colm__title">Заголовок акционного предложения</div>
+                <p class="sale_colm__text">Подробности акционного предложения в несколько строк. Пояснения для привлечения внимания</p><a class="sale_colm__button button_wite" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="sale_colm">
+            <div class="media">
+              <div class="media_img"><img src="img/sale/sale1.jpg"></div>
+              <div class="media_body">
+                <div class="sale_colm__title">Партнёрская программа</div>
+                <p class="sale_colm__text">Подробности партнерской программы предложения в несколько строк. Пояснения для привлечения внимания. Почему стоит работать с нами.</p><a class="sale_colm__button button_wite" href="">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="bg--silver advansed_box">
+      <div class="container">
+        <h2 class="title--mr_media">Преимущества iPipe</h2>
+        <div class="row">
+          <div class="col-4">
+            <div class="media_row"><img class="media_img" src="img/media/plus1.png">
+              <div class="media_body">
+                <div class="media_body__title media_row__title--green">Собственное оборудование</div>
+                <div class="media_body__text">Предлагаем клиентам серверные решения от производителей SuperMicro, Intel и Dell. Не перепродаём и не используем десктопное, Б/У и отремонтированное оборудование.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="media_row"><img class="media_img" src="img/media/plus2.png">
+              <div class="media_body">
+                <div class="media_body__title media_row__title--green">Дата-центр SafeData</div>
+                <div class="media_body__text">Оборудование размещается в московском дата-центре с защищённой сетевой инфраструктурой. Соответствует требованиям уровня TIER 3, а также требованиям ФЗ-152.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="media_row"><img class="media_img" src="img/media/plus3.png">
+              <div class="media_body">
+                <div class="media_body__title media_row__title--green">Непрерывный мониторинг</div>
+                <div class="media_body__text">Оборудование размещается в московском дата-центре с защищённой сетевой инфраструктурой. Соответствует требованиям уровня TIER 3, а также требованиям ФЗ-152.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="media_row"><img class="media_img" src="img/media/plus4.png">
+              <div class="media_body">
+                <div class="media_body__title media_row__title--green">Любая конфигурация</div>
+                <div class="media_body__text"> Мы напрямую сотрудничаем с производителями серверного оборудования,поэтому можем предоставить любую доступную на рынке конфигурацию сервера, от однопроцессорного сервера до сложнейших Blade и Cloud-систем.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="media_row"><img class="media_img" src="img/media/plus5.png">
+              <div class="media_body">
+                <div class="media_body__title media_row__title--green">Индивидуальный подход</div>
+                <div class="media_body__text">Готовы находить решения, подобранные индивидуально для Вашей компании - как технические, так и финансовые. Работаем и с большими, и с развивающимися проектами, с учётом их особенностей.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="media_row"><img class="media_img" src="img/media/plus6.png">
+              <div class="media_body">
+                <div class="media_body__title media_row__title--green">15 лет успешной работы</div>
+                <div class="media_body__text">Системные администраторы 24/7 следят за работой инфраструктуры с помощью собственного комплекса мониторинга и, в случае необходимости, готовы оперативно решить любую проблему или оказать техподдержку.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="row bg--mr_dablx1">
+        <div class="col-8">
+          <div class="news-section section--paddings">
+            <div class="header_section">
+              <h2 class="header_section__title title--left">Новости компании</h2><a class="header_section__link" href="">Все новости</a>
+            </div>
+            <div class="news-section__list">
+              <section class="media"><img class="media_img" src="img/news/section_min/news1.jpg">
+                <div class="media_body">
+                  <div class="news-section__body-title">Интересный заголовок статьи</div>
+                  <div class="news-section__body-content">
+                    <div class="list-content-text">Краткое описание новости, основные события, тезисы и тд. Любой текст</div>
+                    <div class="list-content-button button_wite">Подробнее</div>
+                  </div>
+                  <div class="news-section__body-date">28 сентября 2019 г.</div>
+                </div>
+              </section>
+              <section class="media"><img class="media_img" src="img/news/section_min/news1.jpg">
+                <div class="media_body">
+                  <div class="news-section__body-title">Второй очень интересный заголовок</div>
+                  <div class="news-section__body-content">
+                    <div class="list-content-text">Если текст в описании или в заголовке не помещается, его следуе...</div>
+                    <div class="list-content-button button_wite">Подробнее</div>
+                  </div>
+                  <div class="news-section__body-date">28 сентября 2019 г.</div>
+                </div>
+              </section>
+              <section class="media"><img class="media_img" src="img/news/section_min/news1.jpg">
+                <div class="media_body">
+                  <div class="news-section__body-title">Заголовок третей статьи, который не поме...</div>
+                  <div class="news-section__body-content">
+                    <div class="list-content-text">Его следует обрезать тремя точками в</div>
+                    <div class="list-content-button button_wite">Подробнее</div>
+                  </div>
+                  <div class="news-section__body-date">28 сентября 2019 г.</div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="blogs-section section--paddings">
+            <div class="header_section">
+              <h2 class="header_section__title title--left">Блог</h2><a class="header_section__link" href="">Все статьи</a>
+            </div>
+            <div class="blog-section__list">
+              <div class="blog-section__title">Интересный заголовок статьи из блога в три строчки</div>
+              <div class="blog-section__text">Краткое описание новости, основные события, тезисы и тд. Любой текст.</div>
+              <div class="blog-section__button">
+                <div class="button_wite">Подробнее</div>
+              </div><img class="blog-section__img" src="img/blog/blog_mini.jpg">
+              <div class="blog-section__date">18 июля 2019 г.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="bg--silver bg--mr">
+      <div class="container">
+        <h2>Отзывы клиентов</h2>
+        <div class="row justify-content-center">
+          <div class="col-10">
+            <div class="slider_comments slide_top">
+              <section>
+                <div class="slider_comments__header">
+                  <div class="media comments_autor"><img class="media_img" src="img/comments/cisco/comen1.png">
+                    <div class="media_body">
+                      <div class="comments_autor__title title--green">Фамилия Имя Отчество</div>
+                      <div class="comments_autor__text">Длинное названи компании «Фирма» Должность в компании</div>
+                    </div>
+                  </div><a class="comments_header__logo" href=""><img src="img/comments/cisco/logo_com.png"></a>
+                </div>
+                <div class="slider_comments__content">
+                  <p>Каждый из нас понимает очевидную вещь: противоположная консультация с широким активом способствует повышению качества переосмысления внешнеэкономических политик. Банальные, но неопровержимые выводы, а также стремящиеся вытеснить традиционное производство, нанотехнологии являются только методом политического участия и в равной степени предоставлены сами себе.</p>
+                  <p class="paragraf--mr">Приятно, граждане, наблюдать, как ключевые особенности структуры проекта ограничены исключительно образом мышления.</p>
+                </div>
+              </section>
+              <section>
+                <div class="slider_comments__header">
+                  <div class="media comments_autor"><img class="media_img" src="img/comments/cisco/comen1.png">
+                    <div class="media_body">
+                      <div class="comments_autor__title title--green">Фамилия Имя Отчество</div>
+                      <div class="comments_autor__text">Длинное названи компании «Фирма» Должность в компании</div>
+                    </div>
+                  </div><a class="comments_header__logo" href=""><img src="img/comments/cisco/logo_com.png"></a>
+                </div>
+                <div class="slider_comments__content">
+                  <p>Каждый из нас понимает очевидную вещь: противоположная консультация с широким активом способствует повышению качества переосмысления внешнеэкономических политик. Банальные, но неопровержимые выводы, а также стремящиеся вытеснить традиционное производство, нанотехнологии являются только методом политического участия и в равной степени предоставлены сами себе.</p>
+                  <p class="paragraf--mr">Приятно, граждане, наблюдать, как ключевые особенности структуры проекта ограничены исключительно образом мышления.</p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="footer_item foot_bord">
+              <div class="footer_item__header">Навигация по сайту</div>
+              <div class="row">
+                <div class="col-6">
+                  <ul class="footer_item__menu">
+                    <li><a href="">Главная</a></li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="footer_item__menu">
+                    <li><a href="">VPS готовые</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="footer_item foot_bord">
+              <div class="footer_item__header">Навигация по сайту</div>
+              <div class="row">
+                <div class="col-6">
+                  <ul class="footer_item__menu">
+                    <li><a href="">Главная</a></li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="footer_item__menu">
+                    <li><a href="">VPS готовые</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="footer_item">
+              <div class="footer_item__header">Контакты</div>
+              <ul class="footer_item__menu">
+                <li><a href="tel:8 (800) 600-26-10">8 (800) 600-26-10</a></li>
+                <li><a href="tel:+7 (495) 108-54-70">+7 (495) 108-54-70</a></li>
+                <li class="mr--foot">115280, г. Москва,  ул. Ленинская Слобода, д. 19, 3 этаж, комната 21Ж-1Ф</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="foot">
+          <div class="row justify-content-between"><a class="foot__logo" href=""><img src="img/logo_footer.png"></a>
+            <div class="foot__terms">© 2019. При использовании материалов сайта обязательна ссылка на источник.</div>
+            <div class="foot__social"><a href=""><img src="img/social/feis.png"></a><a href=""><img src="img/social/twit.png"></a><a href=""><img src="img/social/vk.png"></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="/js/script.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+    <script src="slick/slick.min.js" type="text/javascript"></script>
+    <script>
+      $('.slide_top').slick({
+        infinite: true,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      
+      });
+    </script>
+    <script>
+      window.ga = function () {ga.q.push(arguments)}; ga.q = []; ga.l = +new Date;
+      ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview');
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  </body>
+</html>
